@@ -1,16 +1,20 @@
-<script>
+<script lang="ts">
   import { useChat } from 'ai/svelte'
   import MemoizedMD from '@/markdown/MemoizedMD.svelte'
   import ChevronRight from '@/icons/ChevronRight.svelte'
-  import Input from '@/lib/components/ui/input/input.svelte'
+  import InputElement from '@/lib/components/ui/input/input.svelte'
 
   const { input, handleSubmit, messages } = useChat()
+
+  function capitalizeFirstLetter(input: string) {
+    return input.charAt(0).toUpperCase() + input.slice(1)
+  }
 </script>
 
 <div class="flex flex-col items-center">
   <div class="relative flex w-full max-w-lg flex-col items-start overflow-hidden px-5">
     <form on:submit={handleSubmit} class="fixed bottom-4 flex w-[75vw] max-w-[500px] flex-row items-center space-x-2">
-      <Input
+      <InputElement
         id="message"
         type="message"
         autocomplete="off"
@@ -24,7 +28,13 @@
     </form>
     <div class="flex max-h-[90vh] w-full flex-col overflow-y-scroll">
       {#each $messages as message}
+        <div class="mt-3 h-[1px] w-full bg-white" />
+        <span class="max-w-max rounded border px-2 py-1 text-xs">
+          {capitalizeFirstLetter(message.role)}
+        </span>
+        <div class="mt-2 h-[1px] w-full bg-white" />
         <MemoizedMD message={message.content} />
+        <div class="mt-3 h-[1px] bg-black/10" />
       {/each}
     </div>
   </div>
