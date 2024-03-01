@@ -1,4 +1,5 @@
 <script lang="ts">
+  // File: src/routes/+page.svelte
   import { useChat } from 'ai/svelte'
   import MemoizedMD from '@/markdown/MemoizedMD.svelte'
   import ChevronRight from '@/icons/ChevronRight.svelte'
