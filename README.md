@@ -1,4 +1,4 @@
-<!-- ![](https://raw.githubusercontent.com/xataio/mdx-blog/main/images/cms-cover.jpeg) -->
+![](https://raw.githubusercontent.com/xataio/mdx-blog/main/images/rag-sveltekit-xata/rag-sveltekit-xata-illustration.jpeg)
 
 # Building a Retrieval-Augmented Generation Chatbot with SvelteKit and Xata Vector Search
 
@@ -10,7 +10,7 @@
 
 ## Introduction
 
-<!-- Learn how to create a custom CMS using Xata, Remix, Novel, LiteLLM, and Vercel. -->
+Learn how to create a Retrieval-Augmented Generation Chatbot using Xata, SvelteKit, LiteLLM, TailwindCSS and Vercel.
 
 ## Tech Stack + Features
 
